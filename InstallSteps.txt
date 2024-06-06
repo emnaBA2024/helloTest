@@ -1,0 +1,34 @@
+Commandes jenkins
+01  apt-cache search openjdk | grep openjdk-17
+ 02  sudo apt install default-jdk
+ 03  java --version
+ 04  sudo apt install openjdk-17
+ 05  sudo apt install openjdk-17-jre
+ 06  cat .bashrc
+ 07  echo 'JAVA_HOME="/usr/lib/jvm/java-17-openjdk-amd64/bin"' >>.bashrc
+ 08  cat .bashrc
+ 09  source .bashrc 
+ 10  echo $JAVA_HOME
+ 11  sudo apt install tomcat9 tomcat9-docs tomcat9-admin -y
+ 12  sudo systemctl status tomcat9.service 
+ 13  sudo wget -O /usr/share/keyrings/jenkins-keyring.asc https://pkg.jenkins.io/debian-stable/jenkins.io-23.key
+ 14  echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]"  https://pkg.jenkins.io/debian-stable binary/ | sudo tee  /etc/apt/sources.list.d/jenkins.list > /dev/null
+ 15  sudo apt-get update
+ 16  sudo apt-get install jenkins
+ 17* 
+ 18  sudo systemctl stop tomcat9.service 
+ 19  sudo apt-get install jenkins
+  20 sudo systemctl start jenkins.service
+ 21  sudo systemctl status jenkins.service
+ 22  history
+ 23  cd /var/lib/tomcat9/conf
+ 24  ls
+ 25  chmod 666 server.xml 
+ 26  sudo chmod 666 server.xml  
+ 27  nano server.xml  =>  on a changé le port du tomcat (de 8080 à 8089) :
+<Connector port="8089" protocol="HTTP/1.1" connectionTimeout="20000" redirectPort="8443" />
+ 28  sudo systemctl start tomcat9.service 
+ 29  sudo systemctl status tomcat9.service 
+ 30  sudo systemctl status jenkins.service
+Mot de passe adminstrateur jenkins  : a713ff81b77a4173877fa58e1c0ccdb2
+
