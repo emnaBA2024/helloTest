@@ -31,4 +31,16 @@ Commandes jenkins
  29  sudo systemctl status tomcat9.service 
  30  sudo systemctl status jenkins.service
 Mot de passe adminstrateur jenkins  : a713ff81b77a4173877fa58e1c0ccdb2
+sudo chmod 666 tomcat-users.xml 
+ 31  nano tomcat-users.xml 
+ 32  sudo systemctl restart tomcat9.service 
+ 33  nano tomcat-users.xml 
+ 34  sudo systemctl restart tomcat9.service
+--Modification du fichier tomcat9.service: attribution des droits aux rôles
+  <role rolename="manager-gui"/>
+  <role rolename="admin-gui"/>
+  <user username="tomcat" password="tomcat" roles="manager-gui,admin-gui"/>
+  <role rolename="manager-script"/>
+  <user username="tomcat9" password="tomcat9" roles="manager-script"/>
 
+ 
