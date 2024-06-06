@@ -43,4 +43,9 @@ sudo chmod 666 tomcat-users.xml
   <role rolename="manager-script"/>
   <user username="tomcat9" password="tomcat9" roles="manager-script"/>
 
+--Installation MAVEN
+
+1  sudo apt update 
+2  sudo apt install maven 
+3  mvn -v
  
