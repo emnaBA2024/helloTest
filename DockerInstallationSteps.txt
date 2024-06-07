@@ -10,3 +10,4 @@ grep /etc/group -e "sudo"
 after executing this command, we should restart docker 
 
 docker build -t hello-world-image:latest .
+docker run hello-world-image
