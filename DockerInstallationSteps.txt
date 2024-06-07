@@ -1,7 +1,10 @@
 Hello test file!
 
-Docker Installation: https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04
-Verify the installation : sudo docker run hello-world
-Check docker's group and user=> grep /etc/group -e "docker"  
+*Docker Installation: https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04
+*Verify the installation : sudo docker run hello-world
+
+*Check docker's group and user=> grep /etc/group -e "docker"  
 grep /etc/group -e "sudo"
-Add the user to docker group so we can run docker command without sudo => sudo usermod -aG docker $USER
+
+*Add the user to docker group so we can run docker command without sudo => sudo usermod -aG docker $USER
+after executing this command, we should restart docker 
