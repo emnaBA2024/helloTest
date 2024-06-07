@@ -4,3 +4,4 @@ Docker Installation: https://www.digitalocean.com/community/tutorials/how-to-ins
 Verify the installation : sudo docker run hello-world
 Check docker's group and user=> grep /etc/group -e "docker"  
 grep /etc/group -e "sudo"
+Add the user to docker group so we can run docker command without sudo => sudo usermod -aG docker $USER
